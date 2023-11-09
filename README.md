@@ -1,7 +1,7 @@
 # Quantum Machine Learning Intrusion Detection System
 
-## Introduction
-todo
+## Running the code
+Run the Jupyter Notebooks using the virtual environment (venv) as kernel.
 
 ## Information
 
@@ -13,10 +13,7 @@ QSVM: Quantum Support Vector Machine
 
 ### Results
 
-## What YOU need to do to run the code
-todo: use venv
-
-## What WE did to install Qiskit
+## How we have installed Qiskit
 https://qiskit.org/documentation/getting_started.html
 https://qiskit.org/ecosystem/machine-learning/getting_started.html
 
