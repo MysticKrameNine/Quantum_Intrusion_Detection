@@ -18,13 +18,16 @@ todo: use venv
 
 ## What WE did to install Qiskit
 https://qiskit.org/documentation/getting_started.html
+https://qiskit.org/ecosystem/machine-learning/getting_started.html
 
 ### Install venv
 python -m venv ./venv
 
-### Activate venv (windows PowerShell)
-Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+### Activate venv (windows PowerShell) (you need to activate it every time you want to use it)
 .\venv\Scripts\Activate.ps1
+
+### If error of security policy occurs
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 
 ### Install Qiskit
 pip install qiskit
@@ -34,6 +37,18 @@ pip install qiskit[visualization]
 
 ### See the active packages in the virtual environment
 pip list
+
+### Install Qiskit Machine Learning
+pip install qiskit[machine-learning]
+
+### Install Sklearn (to use dataset)
+pip install scikit-learn
+
+### Install ipykernel (to use the virtual environment in Jupyter)
+pip install ipykernel
+
+### Add the virtual environment to Jupyter
+python -m ipykernel install --user --name=venv
 
 ## Subject
 Keywords: Quantum machine learning, data driven security, intrusion detection systems, NSL-KDD.
