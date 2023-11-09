@@ -1,5 +1,19 @@
-# Quantum_Intrusion_Detection
+# Quantum Machine Learning Intrusion Detection
 
+## Dataset used
+NSL-KDD
+
+## QML Algorithms used
+QSVM: Quantum Support Vector Machine
+
+## Installation
+```bash
+pip install qiskit
+```
+
+## Results
+
+## Subject
 Keywords: Quantum machine learning, data driven security, intrusion detection systems, NSL-KDD.
 Synopsis:
 Several traditional machine learning based intrusion detection systems approaches showed high accu- racy in detecting and classifying network intrusions. However, the performance of training these mod- els degrades as the training dataset increases in size.
@@ -16,6 +30,5 @@ Academic integrity:
 It is very important to correctly acknowledge any ideas, code, or written works by others. Any plagiarism will receive a zero grade.
 Bibliography:
 Kalinin, M., Krundyshev, V. Security intrusion detection using quantum machine leaming techniques. J Comput Virol Hack Tech 19, 125-136 (2023). https://doi.org/10.1007/s11416-022-00435-0
-
 
 ![3-quantummachi](https://github.com/ikramebakkari/Quantum_Intrusion_Detection/assets/56300696/a91c7008-4ad7-4465-8966-f05a2315c69d)
