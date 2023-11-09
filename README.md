@@ -1,17 +1,39 @@
-# Quantum Machine Learning Intrusion Detection
+# Quantum Machine Learning Intrusion Detection System
 
-## Dataset used
+## Introduction
+todo
+
+## Information
+
+### Dataset used
 NSL-KDD
 
-## QML Algorithms used
+### QML Algorithms used
 QSVM: Quantum Support Vector Machine
 
-## Installation
-```bash
-pip install qiskit
-```
+### Results
 
-## Results
+## What YOU need to do to run the code
+todo: use venv
+
+## What WE did to install Qiskit
+https://qiskit.org/documentation/getting_started.html
+
+### Install venv
+python -m venv ./venv
+
+### Activate venv (windows PowerShell)
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+.\venv\Scripts\Activate.ps1
+
+### Install Qiskit
+pip install qiskit
+
+### Install Qiskit Visualization for Jupyter
+pip install qiskit[visualization]
+
+### See the active packages in the virtual environment
+pip list
 
 ## Subject
 Keywords: Quantum machine learning, data driven security, intrusion detection systems, NSL-KDD.
