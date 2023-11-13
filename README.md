@@ -9,6 +9,10 @@ python -m venv ./venv
 ```
 
 ### How to temporary activate your virtual environment in your terminal
+
+#### If ERROR of security policy occurs
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
 #### Windows PowerShell
 ```bash
 .\venv\Scripts\Activate.ps1
@@ -19,12 +23,15 @@ python -m venv ./venv
 source ./venv/bin/activate
 ```
 
-#### If error of security policy occurs
-Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
-
 ### How to install the required packages
 ```bash
 pip install -r requirements.txt
+```
+
+#### If you want to update the requirements.txt file after installing new packages
+*Make sure to run this command after activating your venv and AFTER installing from requirements.txt*
+```bash
+pip freeze > requirements.txt
 ```
 
 ### How to add your virtual environment to Jupyter
