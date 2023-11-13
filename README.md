@@ -57,26 +57,6 @@ QSVM: Quantum Support Vector Machine
 
 ### Results
 
-## How to install the required packages instead of using the requirements.txt file
-
-### Install Qiskit
-pip install qiskit
-
-### Install Qiskit Visualization for Jupyter
-pip install qiskit[visualization]
-
-### Install Qiskit Machine Learning
-pip install qiskit[machine-learning]
-
-### Install Sklearn (to use dataset)
-pip install scikit-learn
-
-### Install ipykernel (to use the virtual environment in Jupyter)
-pip install ipykernel
-
-### Add the virtual environment to Jupyter
-python -m ipykernel install --user --name=venv
-
 ## Subject
 Keywords: Quantum machine learning, data driven security, intrusion detection systems, NSL-KDD.
 Synopsis:
