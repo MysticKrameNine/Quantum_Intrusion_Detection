@@ -1,9 +1,46 @@
 # Quantum Machine Learning Intrusion Detection System
 
 ## Running the code
-Run the Jupyter Notebooks using the virtual environment (venv) as kernel.
+Run the Jupyter Notebooks using your virtual environment (venv) as kernel.
+
+### How to create your virtual environment
+```bash
+python -m venv ./venv
+```
+
+### How to temporary activate your virtual environment in your terminal
+#### Windows PowerShell
+```bash
+.\venv\Scripts\Activate.ps1
+```
+
+#### Linux / MacOS
+```bash
+source ./venv/bin/activate
+```
+
+#### If error of security policy occurs
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+### How to install the required packages
+```bash
+pip install -r requirements.txt
+```
+
+### How to add your virtual environment to Jupyter
+```bash
+python -m ipykernel install --user --name=venv
+```
+
+### How to run Jupyter Notebooks (you need to select your virtual environment as kernel)
+```bash
+jupyter notebook
+```
 
 ## Information
+[Getting started](https://qiskit.org/documentation/getting_started.html)
+
+[Machine learning](https://qiskit.org/ecosystem/machine-learning/getting_started.html)
 
 ### Dataset used
 NSL-KDD
@@ -13,28 +50,13 @@ QSVM: Quantum Support Vector Machine
 
 ### Results
 
-## How we have installed Qiskit
-[Getting started](https://qiskit.org/documentation/getting_started.html)
-
-[Machine learning](https://qiskit.org/ecosystem/machine-learning/getting_started.html)
-
-### Install venv
-python -m venv ./venv
-
-### Activate venv (windows PowerShell) (you need to activate it every time you want to use it)
-.\venv\Scripts\Activate.ps1
-
-### If error of security policy occurs
-Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+## How to install the required packages instead of using the requirements.txt file
 
 ### Install Qiskit
 pip install qiskit
 
 ### Install Qiskit Visualization for Jupyter
 pip install qiskit[visualization]
-
-### See the active packages in the virtual environment
-pip list
 
 ### Install Qiskit Machine Learning
 pip install qiskit[machine-learning]
