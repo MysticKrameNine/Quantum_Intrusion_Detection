@@ -14,8 +14,9 @@ QSVM: Quantum Support Vector Machine
 ### Results
 
 ## How we have installed Qiskit
-https://qiskit.org/documentation/getting_started.html
-https://qiskit.org/ecosystem/machine-learning/getting_started.html
+[Getting started](https://qiskit.org/documentation/getting_started.html)
+
+[Machine learning](https://qiskit.org/ecosystem/machine-learning/getting_started.html)
 
 ### Install venv
 python -m venv ./venv
