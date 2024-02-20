@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{float} % For the H specifier
+\author{Bakkari Ikrame\and{Monnier Killian}\and{André Émilien}}
+\title{Quantum Machine Learning Based Intrusion Detection System}
+\begin{document}
+\maketitle
+\section{Abstract}
+An abstract is a brief summary of a research article, thesis, review, 
+conference proceeding, or any in-depth analysis of a particular subject and is 
+often used to help the reader quickly ascertain the paper's purpose.equation
+\section{Introduction}
+As cyberattacks become more sophisticated, current IDS doesn't match
+\section{State of the Art}
+Currently, a qubit lifetime vary from dozens to hundreds of milliseconds. [1]
+Thus, qubit error correction is mandatory. The five-qubit error correcting 
+code is the smallest quantum error correcting code that can protect a logical 
+qubit. [2]\par
+IBM Condor processor has 1,121 logical qubits. The cooler the processor, 
+the more the qubits are stable. Thus, the Condor needs to be cooled down to a 
+temperature of around 0.015 K. Today we can freely use IBM 127-qubit Eagle processor 
+for 10 minutes per month. Heron is their fastet quantum processor with 133 
+qubits and they are actively working on coupling samples of it. They call this 
+technology the IBM Q System Two. IBM claims this quantum computer will advance 
+science. [3]
+\section{Our QML based IDS}
+If we keep all the 41 features of the NSL-KDD dataset, our Quantum model will
+have 164 weights. If we sum these weights with the 41 features we might need
+a machine with 205 qubits. And, no such machine can be rented from IBM.\par
+So, we need to reduce our number of features. Our approach is to train a
+classical model with the NSL-KDD and compute the Shapley values of each
+features for predicting the testing dataset.\par
+The Shapley value comes from the game theory and measures the contribution of 
+a player (a feature) in a coalition (all the features) to the game's result 
+(the prediction). It is used and reknown in Explainable Artificial 
+Intelligence.\par
+If we define the number of qubits our model needs to be at least five times 
+the number of features (it might needs other qubits we don't know yet), and, 
+we consider we can rent a 127-qubit processor from IBM we can afford 20 
+features (we keep 27 qubits if we need them later).\par
+We defined the number of features to keep and how to select them given a model
+and a test dataset. Now we will define how we selected our model.\par
+To simplify things, if a stream is normal its label is zero, if it is not, its 
+label is one. Thus, our model is a binary classifier.\par
+The recall of a binary classifier is defined as
+$$\frac{true\_positives}{true\_positives+false\_negatives}$$
+If our recall is one, then, we detect every intrusion but we might also detect
+everything as an intrusion and the human operator monitoring the IDS might miss
+a real intrusion. We need not to overwelm the monitor with false negatives. 
+So, we evaluated the precision which measures the true intrusions 
+rate among streams detected as intrusions. The F1 score combines both the 
+recall and the precision. Thus, we select the model with the best F1 score.\newline
+\begin{table}[H]
+\caption{The classical classifiers evaluations}
+\label{f1score-classical-classifier}
+\center
+\begin{tabular}{|l|l|}
+\hline
+        Classifier & F1 Score \tabularnewline
+        \hline
+        Logistic Regression &  65.86\% \tabularnewline
+        Random Forest & 74.95\% \tabularnewline
+        Decision Tree & 82.30\% \tabularnewline
+        KNN & 75.67\% \tabularnewline
+        Naive Bayes & 7.09\% \tabularnewline
+\hline
+\end{tabular}
+\end{table}
+%TODO The 5 first features with the best Shapley values when classifying KDDTest+.txt's streams with our fitted decision tree classifier
+Our data is classic and our algorithm is quantum. So, we use a second-order 
+Pauli-Z evolution circuit alias ZZ feature map to encode our data.
+\section{Results}
+\section{Conclusion}
+\section{References}
+[1] : https://www.nature.com/articles/s41534-021-00510-2\newline
+[2] : Gottesman, Daniel (2009). "An Introduction to Quantum Error Correction 
+and Fault-Tolerant Quantum Computation".\newline
+[3] : https://www.youtube.com/watch?v=Qndz54SGCAs
+[4] : https://newsroom.ibm.com/IBM-research?item=32425
+[5] : https://techhq.com/2020/12/ibm-super-fridge-aims-to-solve-quantum-computer-cooling-problem/
+\end{document}
